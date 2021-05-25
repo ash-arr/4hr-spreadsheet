@@ -7,14 +7,18 @@ This project is a demonstration of my current frontend abilities. The goal is to
 ### To-do
 
 - [ ] Render cells
-  - [ ] Determined by defined number of columns and rows
-  - [ ] Cells should be editable and store their values in memory
+  - [x] Determined by defined number of columns and rows
+  - [x] Cells should be editable and store their values in memory
   - [ ] Columns and rows should render keys
+
+- [ ] Improve sheet performance
+  - [ ] Single cell update should not trigger rerender of all cells
 
 - [ ] Parse the inputs with Formula Parser and display calculated values
   - [ ] Render formula bar
+
 - [ ] Implement resizing of columns and rows
-- [ ] Persist the state locally using IndexDB
+- [ ] Persist the state locally using IndexedDB API
 
 ### Done ✓
 

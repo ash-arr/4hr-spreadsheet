@@ -1,0 +1,9 @@
+/*
+ * TODO - Move to JS for variable columns/rows
+ */
+.sheet-container {
+    display: grid;
+    grid-template-columns: repeat(10, 100px);
+    gap: 0px;
+    grid-auto-rows: auto;
+}
