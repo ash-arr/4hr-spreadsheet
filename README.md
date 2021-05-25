@@ -13,6 +13,7 @@ This project is a demonstration of my current frontend abilities. The goal is to
 
 - [ ] Improve sheet performance
   - [ ] Single cell update should not trigger rerender of all cells
+  - [ ] Convert global store to flat object
 
 - [ ] Parse the inputs with Formula Parser and display calculated values
   - [ ] Render formula bar
