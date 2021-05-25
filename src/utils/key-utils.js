@@ -1,7 +1,24 @@
 const CAPITAL_LETTER_CHAR_CODE_OFFSET = 64;
+const NUM_OF_CHARACTERS = 26;
 
-const getColKey = (c) => {
-  return String.fromCharCode(c + CAPITAL_LETTER_CHAR_CODE_OFFSET);
+/**
+ * Returns character representation of column number, from 'A' to 'ZZ'
+ */
+const getColKey = (columnNumber) => {
+  if (columnNumber > NUM_OF_CHARACTERS * (NUM_OF_CHARACTERS + 1)) {
+    // TODO - enforce limitations (e.g. Google Sheets does not exceed 'ZZZ')
+    return null;
+  }
+  const charNum = columnNumber % NUM_OF_CHARACTERS || NUM_OF_CHARACTERS;
+  let extraCharNum = Math.floor(columnNumber / NUM_OF_CHARACTERS);
+  // Handle 'Z' case
+  if (columnNumber % NUM_OF_CHARACTERS === 0) extraCharNum--;
+  const char = String.fromCharCode(charNum + CAPITAL_LETTER_CHAR_CODE_OFFSET);
+  const extraChar = extraCharNum
+    ? String.fromCharCode(extraCharNum + CAPITAL_LETTER_CHAR_CODE_OFFSET)
+    : "";
+
+  return extraChar + char;
 };
 
 /**
