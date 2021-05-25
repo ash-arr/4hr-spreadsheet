@@ -4,7 +4,7 @@ const NUM_OF_CHARACTERS = 26;
 /**
  * Returns character representation of column number, from 'A' to 'ZZ'
  */
-const getColKey = (columnNumber) => {
+export const getColKey = (columnNumber) => {
   if (columnNumber > NUM_OF_CHARACTERS * (NUM_OF_CHARACTERS + 1)) {
     // TODO - enforce limitations (e.g. Google Sheets does not exceed 'ZZZ')
     return null;
